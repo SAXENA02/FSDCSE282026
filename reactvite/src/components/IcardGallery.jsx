@@ -3,12 +3,31 @@ import Icard from "./Icard";
 import result from "../assets/result.png";
 
 function IcardGallery() {
-  const student = {
+  const student = [{
     pic: result,
-    name: "Yogendra",
+    name: "Yash raj saxena",
     rollNo: "12234546554",
-    college: "ABES",
-  };
+    college: "ABES"
+  },
+  {
+    pic: result,
+    name: "Yash raj saxena",
+    rollNo: "12234546554",
+    college: "ABES"
+  },
+  {
+    pic: result,
+    name: "Yash raj saxena",
+    rollNo: "12234546554",
+    college: "ABES"
+  },
+  {
+    pic: result,
+    name: "Yash raj saxena",
+    rollNo: "12234546554",
+    college: "ABES"
+  }
+  ];
 
   return (
     <div
@@ -19,14 +38,22 @@ function IcardGallery() {
         padding: "20px",
       }}
     >
-      <Icard
+      {/* <Icard
         pic={student.pic}
         name={student.name}
         rollNo={student.rollNo}
         college={student.college}
-      />
+      /> */}
+
+      {
+        student.map((element)=>(
+          <Icard data={element} />
+        ))
+      }
+
     </div>
   );
 }
 
 export default IcardGallery;
+

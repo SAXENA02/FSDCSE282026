@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icard({ pic, name, rollNo, college }) {
+function Icard({ data }) {
   return (
     <div
       style={{
@@ -10,11 +10,11 @@ function Icard({ pic, name, rollNo, college }) {
         width: "200px",
       }}
     >
-      <img src={pic} height={200} width={200} alt="Student" />
+      <img src={data.pic} height={200} width={200} alt="Student" />
 
-      <h2>NAME: {name}</h2>
-      <h2>ROLLNO: {rollNo}</h2>
-      <h2>COLLEGE: {college}</h2>
+      <h2>NAME: {data.name}</h2>
+      <h2>ROLLNO: {data.rollNo}</h2>
+      <h2>COLLEGE: {data.college}</h2>
     </div>
   );
 }
